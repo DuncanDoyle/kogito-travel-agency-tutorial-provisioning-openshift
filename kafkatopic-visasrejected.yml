@@ -1,0 +1,16 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: KafkaTopic
+metadata:
+  generation: 1
+  labels:
+    strimzi.io/cluster: kogito-kafka
+  name: visasrejected
+  selfLink: /apis/kafka.strimzi.io/v1beta1/namespaces/kogito-travel-agency/kafkatopics/visasrejected
+spec:
+  config:
+    message.format.version: 2.3-IV1
+    retention.ms: "604800000"
+    segment.bytes: "1073741824"
+  partitions: 1
+  replicas: 1
+  topicName: visasrejected

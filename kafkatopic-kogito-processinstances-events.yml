@@ -1,0 +1,16 @@
+apiVersion: kafka.strimzi.io/v1beta1
+kind: KafkaTopic
+metadata:
+  generation: 1
+  labels:
+    strimzi.io/cluster: kogito-kafka
+  name: kogito-processinstances-events
+  selfLink: /apis/kafka.strimzi.io/v1beta1/namespaces/kogito-travel-agency/kafkatopics/kogito-processinstances-events
+spec:
+  config:
+    message.format.version: 2.3-IV1
+    retention.ms: "604800000"
+    segment.bytes: "1073741824"
+  partitions: 1
+  replicas: 1
+  topicName: kogito-processinstances-events

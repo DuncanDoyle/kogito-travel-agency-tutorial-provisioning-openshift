@@ -1,0 +1,9 @@
+apiVersion: app.kiegroup.org/v1alpha1
+kind: KogitoInfra
+metadata:
+  generation: 1
+  name: infra
+  selfLink: /apis/app.kiegroup.org/v1alpha1/namespaces/kogito-travel-agency/kogitoinfras/infra
+spec:
+  installInfinispan: true
+  installKafka: true

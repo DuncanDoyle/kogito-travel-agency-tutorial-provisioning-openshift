@@ -1,0 +1,36 @@
+apiVersion: app.kiegroup.org/v1alpha1
+kind: KogitoDataIndex
+metadata:
+  generation: 1
+  name: kogito-data-index
+  selfLink: /apis/app.kiegroup.org/v1alpha1/namespaces/kogito-travel-agency/kogitodataindices/kogito-data-index
+spec:
+  image: quay.io/kiegroup/kogito-data-index:0.6.1
+  infinispan:
+    credentials:
+      passwordKey: password
+      secretName: kogito-infinispan-credential
+      usernameKey: username
+    uri: kogito-infinispan:11222
+  kafka:
+    instance: kogito-kafka
+  replicas: 1
+status:
+  conditions:
+  - condition: Failed
+    lastTransitionTime: "2020-02-10T16:40:11Z"
+    message: Deployment Error
+  dependenciesStatus:
+  - OK
+  deploymentStatus:
+    collisionCount: 0
+    currentReplicas: 1
+    currentRevision: kogito-data-index-84b6cb685
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updateRevision: kogito-data-index-84b6cb685
+    updatedReplicas: 1
+  route: http://kogito-data-index-kogito-travel-agency.apps-crc.testing
+  serviceStatus:
+    loadBalancer: {}
